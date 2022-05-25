@@ -1,11 +1,12 @@
 import {useContext} from 'react'
+import {Text} from 'react-native'
 
-const Test = () => {
+const Test = (props) => {
 
-    const user = useCOntext(UserContext)
+    const user = useContext(props.user)
 
     return(
-        
+        <Text>{user}</Text>
     )
 }
 
