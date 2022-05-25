@@ -8,7 +8,7 @@ const CardBody = ({image,title,description}) => {
            </View>
             <View style={{margin:20,flex:1}}>
             <Text>{title}</Text>
-            <Text style={{marginTop:20}}>{description}</Text>
+            <Text style={{flex:1,marginTop:20}}>{description}</Text>
             </View>
         </View>
     )

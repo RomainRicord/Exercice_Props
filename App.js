@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import {useState,useEffect} from 'react'
-import { StyleSheet, Text, View,FlatList } from 'react-native';
+import { StyleSheet,SafeAreaView, Text, View,FlatList } from 'react-native';
 import Card from './src/component/Card';
 import data from './assets/data'
 import {SearchBar} from '@rneui/base'
@@ -45,7 +45,7 @@ export default function App() {
   },[])
 
   return (
-    <ScrollView>
+    <View>
       <SearchBar  placeholder="Recherche"
       onChangeText={(text) => searchFilterFunction(text)}
       value={search}
@@ -53,16 +53,18 @@ export default function App() {
         flexDirection:'row-reverse'
       }}
       />
-   <View style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-   <FlatList
-  numColumns={2}
-  data={filteredDataSource}
-  renderItem={({ item, index, separators }) => (
-    <Card key={index} kl={index} e={item} />
-  )}
-  />
+   <View style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',marginBottom:80}}>
+   <SafeAreaView>
+    <FlatList
+    numColumns={2}
+    data={filteredDataSource}
+    renderItem={({ item, index, separators }) => (
+      <Card key={index} kl={index} e={item} />
+    )}
+    />
+   </SafeAreaView>
+   </View>
    </View> 
-   </ScrollView>
   )
 }
 
