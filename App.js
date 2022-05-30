@@ -59,7 +59,7 @@ export default function App() {
     numColumns={2}
     data={filteredDataSource}
     renderItem={({ item, index, separators }) => (
-      <Card key={index} kl={index} e={item} />
+      <Card key={index} kl={index} e={item}  />
     )}
     />
    </SafeAreaView>
