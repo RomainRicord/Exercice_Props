@@ -1,10 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import {useState,useEffect} from 'react'
-import { StyleSheet,SafeAreaView, Text, View,FlatList } from 'react-native';
+import { StyleSheet,SafeAreaView, View,FlatList } from 'react-native';
 import Card from './src/component/Card';
 import data from './assets/data'
 import {SearchBar} from '@rneui/base'
-import { ScrollView } from 'react-native-gesture-handler';
 
 export default function App() {
 
